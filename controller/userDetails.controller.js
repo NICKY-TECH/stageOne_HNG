@@ -14,7 +14,6 @@ const userDetails = (req, res) => {
   }
 
   const utcTimeString = getUtcTimeString();
-  console.log("Current UTC Time:", currentUTCTime);
     let day = new Date().getDay();
     const daysOfWeek = [
       "Sunday",
