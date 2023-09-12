@@ -1,12 +1,5 @@
 const { join } = require("path");
 
-const { userDetailsValidation } = require(join(
-  __dirname,
-  "..",
-  "utils",
-  "validate"
-));
-
 const userDetails = (req, res) => {
   function getCurrentUTCTime() {
     const now = new Date();
