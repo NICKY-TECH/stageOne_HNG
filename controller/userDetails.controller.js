@@ -33,23 +33,17 @@ const userDetails = (req, res) => {
       "Saturday",
     ];
     return res.status(200).json({
-      success: true,
-      message: "Validation process successful",
-      data: {
-        slack_name: `${req.query.slack_name}`,
-        current_day: `${daysOfWeek[day]}`,
-        utc_time: `${currentUTCTime}`,
-        track: `${req.query.track}`,
-        github_file_url:"",
-        github_repo_url: "",
-        status_code: "200",
-      },
+      slack_name: `${req.query.slack_name}`,
+      current_day: `${daysOfWeek[day]}`,
+      utc_time: `${currentUTCTime}`,
+      track: `${req.query.track}`,
+      github_file_url: "https://github.com/NICKY-TECH/stageOne_HNG/blob/master/server.js",
+      github_repo_url: "https://github.com/NICKY-TECH/stageOne_HNG",
+      status_code: "200",
     });
   }
   return res.status(400).json({
-    success: false,
-    message: "Validation error",
-    data: { error },
+    status_code: "400",
   });
 };
 
