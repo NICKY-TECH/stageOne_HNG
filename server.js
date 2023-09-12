@@ -16,4 +16,4 @@ app.listen(`${PORT}`, () => {
   console.log("server is currently running");
 });
 
-app.get("/api/details/stageone", userDetails);
+app.get("/api", userDetails);
