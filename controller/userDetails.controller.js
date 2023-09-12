@@ -14,7 +14,6 @@ const userDetails = (req, res) => {
 
   const currentUTCTime = getCurrentUTCTime();
   console.log("Current UTC Time:", currentUTCTime);
-  if (!error) {
     let day = new Date().getDay();
     const daysOfWeek = [
       "Sunday",
@@ -34,10 +33,6 @@ const userDetails = (req, res) => {
       github_repo_url: "https://github.com/NICKY-TECH/stageOne_HNG",
       status_code: "200",
     });
-  }
-  return res.status(400).json({
-    status_code: "400",
-  });
 };
 
 module.exports = {
